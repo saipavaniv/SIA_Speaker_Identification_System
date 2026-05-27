@@ -1,0 +1,17 @@
+stages:
+  evaluate:
+    cmd: python src/evaluate_model.py
+    deps:
+      - src/evaluate_model.py
+      - src/extract_features.py
+      - src/utils.py
+      - models/knn_model.pkl
+      - models/svm_model.pkl
+      - models/scaler.pkl
+    outs:
+      - plots/model_comparison.png
+      - plots/confusion_matrix_knn.png
+      - plots/confusion_matrix_svm.png
+    metrics:
+      - models/evaluation_results.json:
+          cache: false

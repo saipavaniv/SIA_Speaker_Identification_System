@@ -3,6 +3,7 @@ __pycache__/
 *.pyc
 .venv/
 venv/
+*.wav
 
 # Secrets
 .env
@@ -17,6 +18,7 @@ venv/
 *.onnx
 features/
 models/
+models/*.pkl
 
 # OS/editor
 .DS_Store
